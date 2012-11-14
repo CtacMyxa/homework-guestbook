@@ -1,0 +1,8 @@
+{%extends 'WorkGuestBookBundle:Default:index.html.twig'%}
+
+{% block messages %}
+    <B>{{ post.getTitle() }}</B><small>says:</small>{{ post.getBody() }}
+    <hr align="left" width="10%"/>
+    <small>Запись создана {{ post.getCreatedDate().format("Y-m-d H:i:s") }}</small>
+    <hr/>
+{% endblock %}

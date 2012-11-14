@@ -1,0 +1,56 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/workguestbook/css/default_style.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div id="d_1">
+        <table id="tab_1" cellspacing="0" cellpadding="5">
+            <tr>
+                <td id="header">
+                    {% block header %}
+                        <img src="{{ asset('bundles/workguestbook/images/geekhub.jpg') }}" align="right" align="top">
+                        <H1>GuestBook</H1><br>
+                    {% endblock %}
+                </td>
+            </tr>
+            <tr>
+                <td id="navigation">
+                    {% block navigation %}
+                        navigation |<a href="/app_dev.php/blog/show"> Show all messages</a> |
+                        <a href="/app_dev.php/blog/index"> Main page</a> |
+                    {% endblock %}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="d_2">
+        <table id="tab_2" cellspacing="0" border="1" cellpadding="5">
+            <tr>
+                <td id="messages" >
+                {% block messages %}
+                    Домашняя работа ученика Geekhub <br>
+                    группы Advanced PHP <br>
+                    Мухи Станислава
+                {% endblock %}
+                </td>
+                <td id="forms" valign="top">
+                {% block forms %}
+                    <form action="/app_dev.php/blog/create" target="/app_dev.php/blog/show">
+                        <input type="text" name="title" size="20" maxlength="20"><br>
+                        <textarea name="body" wrap="virtual" cols="40" rows="10">Your message...
+                        </textarea>
+                        <input type="submit" value="send">
+                    </form>
+                {% endblock %}
+                </td>
+            </tr>
+       </table>
+    </div>
+    <div id="footer" position="">
+                {% block footer %}
+                &copy; 2012 создатель сайта типа Я))</a>.
+                {% endblock %}
+    </div>
+{% endblock %}

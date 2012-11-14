@@ -1,0 +1,9 @@
+work_guest_book:
+    resource: "@WorkGuestBookBundle/Controller/"
+    type:     annotation
+    prefix:   /blog
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal

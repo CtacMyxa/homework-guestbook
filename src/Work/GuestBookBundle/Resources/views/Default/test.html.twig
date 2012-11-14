@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path("/app_dev.php/blog/create") }}" target="/app_dev.php/blog/show"
+          method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit"/>
+    </form>
+    {#ID|Username<br>#}
+    {#{% for key in stor%}#}
+        {#<br>#}
+        {#{% for item in key %}#}
+            {#{{ item }}#}
+        {#{% endfor %}#}
+    {#{% endfor %}#}
+{% endblock %}

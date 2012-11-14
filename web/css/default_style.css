@@ -1,0 +1,25 @@
+/*CSS DOCUMENT*/
+#global{ width:100%;
+         border:2px,groove,#b0c4de;
+}
+#header{ height:15%;
+         background: #000000;
+         color: #7fff00;
+}
+#navigation{ height:5%;
+             background: #696969;
+             color: #7fff00;
+}
+#messages{ width: 80%;
+           height:70%;
+           background: #a9a9a9;
+           color: #008b8b;
+}
+#forms{ width: 20%;
+        height:70%;
+        background: #808080;
+        color: #7fff00;
+}
+#footer{ height:10%;
+         background: #2f4f4f;
+         color: #7fff00;}

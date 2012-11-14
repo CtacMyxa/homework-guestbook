@@ -1,0 +1,13 @@
+{% extends 'WorkGuestBookBundle:Default:index.html.twig' %}
+
+{% block messages %}
+    {%for item in post%}
+            <B>{{ item.getTitle() }}</B> <small>says:</small>{{ item.getBody() }}
+            <hr align="left" width="10%"/>
+            <small>Запись создана {{ item.getCreatedDate().format("Y-m-d H:i:s") }}</small>
+            <hr/>
+    {% else %}
+        DRUKEN FEHLER /дрюкен фехлер/<br>
+    {% endfor %}
+
+{% endblock %}

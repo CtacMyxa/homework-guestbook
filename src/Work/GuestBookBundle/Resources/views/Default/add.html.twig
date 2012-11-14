@@ -1,0 +1,11 @@
+{% extends 'WorkGuestBookBundle:Default:index.html.twig' %}
+
+{% block forms %}
+    <form action="/app_dev.php/blog/create" target="/app_dev.php/blog/show">
+        <input type="text" name="title" size="20" maxlength="20"><br>
+        <textarea name="body" wrap="virtual" cols="40" rows="10">
+          Your message...
+        </textarea>
+        <input type="submit" value="send">
+    </form>
+{% endblock %}
